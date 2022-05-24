@@ -19,7 +19,16 @@
     "importHelpers": true,
     "target": "es2017",
     "module": "es2020",
-    "lib": ["es2020", "dom"]
+    "lib": ["es2020", "dom"],
+    "paths": {
+      "@assets/*": ["src/app/assets/*"],
+      "@modules/*": ["src/app/modules/*"],
+      "@providers/*": ["src/app/providers/*"],
+      "@utils/*": ["src/app/utils/*"],
+      "@models/*": ["src/app/models/*"],
+      "@directives/*": ["src/app/directives/*"],
+      "@services/*": ["src/app/services/*"]
+    },
   },
   "angularCompilerOptions": {
     "enableIvy": true,

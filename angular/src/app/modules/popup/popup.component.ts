@@ -1,10 +1,11 @@
-import { Component, Inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Inject } from '@angular/core';
 import { bindCallback } from 'rxjs';
 import { map } from 'rxjs/operators';
-import { TAB_ID } from '../../../../providers/tab-id.provider';
+import { TAB_ID } from '@providers/tab-id.provider';
 
 @Component({
   selector: 'app-popup',
+  changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: 'popup.component.html',
   styleUrls: ['popup.component.scss']
 })
