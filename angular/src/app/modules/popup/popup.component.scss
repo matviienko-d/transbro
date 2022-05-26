@@ -1,1 +1,15 @@
+.popup-wrapper {
+  min-width: 33.75rem;
+}
 
+.header {
+  background-color: var(--header_bg_color);
+  padding: 1.25rem .75rem;
+}
+
+.header__logo {
+  font-size: var(--font_size_25);
+  font-family: var(--font_family_raleway_bold);
+  color: var(--logo_text_color);
+  font-weight: 700;
+}

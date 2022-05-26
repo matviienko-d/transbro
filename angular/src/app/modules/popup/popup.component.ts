@@ -1,7 +1,8 @@
-import { ChangeDetectionStrategy, Component, Inject } from '@angular/core';
-import { bindCallback } from 'rxjs';
-import { map } from 'rxjs/operators';
-import { TAB_ID } from '@providers/tab-id.provider';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { Observable } from "rxjs";
+import { map } from "rxjs/operators";
+import { UiPreferencesRepository } from "@directives/ui-theme/store/ui-preferences.repository";
+import { UiThemes } from "@models/ui-preferences";
 
 @Component({
   selector: 'app-popup',
@@ -10,19 +11,17 @@ import { TAB_ID } from '@providers/tab-id.provider';
   styleUrls: ['popup.component.scss']
 })
 export class PopupComponent {
-  message: string;
+  public isDarkThemeActive$: Observable<boolean> = this.themeRepo.theme$.pipe(
+    map((theme: UiThemes) => theme === UiThemes.DARK)
+  );
 
-  constructor(@Inject(TAB_ID) readonly tabId: number) {}
+  constructor(
+    private uiPreferencesStore: UiPreferencesRepository,
+    private themeRepo: UiPreferencesRepository,
+  ) {}
 
-  async onClick(): Promise<void> {
-    this.message = await bindCallback<string>(chrome.tabs.sendMessage.bind(this, this.tabId, 'request'))()
-      .pipe(
-        map(msg =>
-          chrome.runtime.lastError
-            ? 'The current page is protected by the browser, goto: https://www.google.nl and try again.'
-            : msg
-        )
-      )
-      .toPromise();
+  onThemeChanged(isChecked: boolean): void {
+    const currentTheme = isChecked ? UiThemes.DARK : UiThemes.DEFAULT;
+    this.uiPreferencesStore.updateTheme(currentTheme);
   }
 }
