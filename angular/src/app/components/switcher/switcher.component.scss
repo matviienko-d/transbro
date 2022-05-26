@@ -1,0 +1,46 @@
+:host {
+  display: inline-flex;
+}
+
+.switcher-control {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+
+.switcher-content {
+  cursor: pointer;
+  width: 3.333rem;
+  height: 1.5rem;
+  background: url("../../assets/images/light-theme-switcher-bg.svg") bottom center no-repeat,
+              linear-gradient(180deg, #ABFAFF 0%, #D5FFAB 100%);
+  display: block;
+  border-radius: 6.25rem;
+  position: relative;
+}
+
+.switcher-content:after {
+  content: '';
+  position: absolute;
+  top: 0.167rem;
+  left: 0.167rem;
+  width: 1.167rem;
+  height: 1.167rem;
+  background: #fff;
+  border-radius: 6.25rem;
+  transition: .3s;
+}
+
+.switcher-control:checked + .switcher-content {
+  background: url("../../assets/images/dark-theme-switcher-bg.svg") bottom center no-repeat,
+              linear-gradient(180deg, #364BBA 0%, #A979D9 100%);
+}
+
+.switcher-control:checked + .switcher-content:after {
+  left: calc(100% - 0.167rem);
+  transform: translateX(-100%);
+}
+
+.switcher-content:active:after {
+  width: 2.167rem;
+}

@@ -1,4 +1,9 @@
 html,
 body {
-  font-size: var(--font_size_base);
+  font-size: var(--font_size_15);
+}
+
+body {
+  overflow-x: hidden;
+  font-family: var(--font_family_raleway_regular);
 }
