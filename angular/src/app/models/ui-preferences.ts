@@ -4,5 +4,5 @@ export interface UiTheme {
 
 export enum UiThemes {
   DEFAULT,
-  DARK
+  DARK,
 }

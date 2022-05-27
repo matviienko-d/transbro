@@ -5,7 +5,7 @@ import { v4 as uuidv4 } from 'uuid';
   selector: 'app-switcher',
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './switcher.component.html',
-  styleUrls: ['./switcher.component.scss']
+  styleUrls: ['./switcher.component.scss'],
 })
 export class SwitcherComponent {
   @Input() public isChecked = false;

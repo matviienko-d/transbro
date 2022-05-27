@@ -1,4 +1,4 @@
-import { UiTheme } from "@models/ui-preferences";
+import { UiTheme } from '@models/ui-preferences';
 
 export const DEFAULT_THEME: UiTheme = {
   // Fonts
@@ -13,5 +13,5 @@ export const DEFAULT_THEME: UiTheme = {
   font_family_raleway_bold: '"Raleway-Bold", Helvetica, Arial, sans-serif',
   // Colors
   logo_text_color: '#9E9E9E',
-  header_bg_color: '#FAFAFA'
-}
+  header_bg_color: '#FAFAFA',
+};

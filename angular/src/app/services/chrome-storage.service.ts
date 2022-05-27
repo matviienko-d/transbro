@@ -1,10 +1,9 @@
-import { Injectable } from "@angular/core";
-import { StateStorage } from "@ngneat/elf-persist-state";
-import { toPromise } from "@utils/promise/promise";
+import { Injectable } from '@angular/core';
+import { StateStorage } from '@ngneat/elf-persist-state';
+import { toPromise } from '@utils/promise/promise';
 
 @Injectable()
 export class ChromeStorageEngineService implements StateStorage {
-
   public setItem(key: string, value: Record<string, any>): Promise<any> {
     return toPromise((resolve, reject) => {
       chrome.storage.sync.set({ [key]: value }, () => {

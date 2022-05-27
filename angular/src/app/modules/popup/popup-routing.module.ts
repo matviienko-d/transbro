@@ -6,12 +6,12 @@ const routes: Routes = [
   {
     path: '',
     pathMatch: 'full',
-    component: PopupComponent
-  }
+    component: PopupComponent,
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
 export class PopupRoutingModule {}
