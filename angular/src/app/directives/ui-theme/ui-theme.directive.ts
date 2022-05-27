@@ -1,21 +1,21 @@
 import { Directive, Inject, OnDestroy, OnInit } from '@angular/core';
-import { DOCUMENT } from "@angular/common";
-import { Observable, Subject } from "rxjs";
-import { takeUntil } from "rxjs/operators";
-import { UiTheme, UiThemes } from "@models/ui-preferences";
-import { generateThemeStyles } from "@utils/ui-theme/ui-theme";
-import { DEFAULT_THEME } from "@directives/ui-theme/themes/default-theme";
-import { UiPreferencesRepository } from "@directives/ui-theme/store/ui-preferences.repository";
-import { DARK_THEME } from "@directives/ui-theme/themes/dark-theme";
+import { DOCUMENT } from '@angular/common';
+import { Observable, Subject } from 'rxjs';
+import { takeUntil } from 'rxjs/operators';
+import { UiTheme, UiThemes } from '@models/ui-preferences';
+import { generateThemeStyles } from '@utils/ui-theme/ui-theme';
+import { DEFAULT_THEME } from '@directives/ui-theme/themes/default-theme';
+import { UiPreferencesRepository } from '@directives/ui-theme/store/ui-preferences.repository';
+import { DARK_THEME } from '@directives/ui-theme/themes/dark-theme';
 
 @Directive({
   selector: '[uiTheme]',
 })
 export class UiThemeDirective implements OnInit, OnDestroy {
-  private readonly destroy$ = new Subject<void>()
-  private readonly theme$: Observable<UiThemes>  = this.themeRepo.theme$;
+  private readonly destroy$ = new Subject<void>();
+  private readonly theme$: Observable<UiThemes> = this.themeRepo.theme$;
 
-  constructor(@Inject(DOCUMENT) private document: Document, private themeRepo: UiPreferencesRepository) { }
+  constructor(@Inject(DOCUMENT) private document: Document, private themeRepo: UiPreferencesRepository) {}
 
   ngOnInit(): void {
     this.addThemeNodeToDom();
@@ -23,8 +23,8 @@ export class UiThemeDirective implements OnInit, OnDestroy {
 
     this.theme$.pipe(takeUntil(this.destroy$)).subscribe({
       next: (theme: UiThemes) => {
-        theme === UiThemes.DEFAULT ? this.setTheme(DEFAULT_THEME) : this.setTheme(DARK_THEME)
-      }
+        theme === UiThemes.DEFAULT ? this.setTheme(DEFAULT_THEME) : this.setTheme(DARK_THEME);
+      },
     });
   }
 

@@ -5,6 +5,6 @@ import { OptionsComponent } from './pages/options/options.component';
 
 @NgModule({
   declarations: [OptionsComponent],
-  imports: [CommonModule, OptionsRoutingModule]
+  imports: [CommonModule, OptionsRoutingModule],
 })
 export class OptionsModule {}
