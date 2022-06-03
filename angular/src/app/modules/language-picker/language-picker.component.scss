@@ -1,0 +1,84 @@
+.language-dropdown-toggle {
+  font-size: 1rem;
+  font-family: var(--font_family_raleway_bold);
+  background-color: var(--language_dropdown_bg_color);
+  font-weight: 700;
+  color: var(--dropdown_text_color);
+  width: 12.38125rem;
+  padding: .4375rem 0;
+  border-radius: .625rem;
+  border: .0625rem solid var(--primary_stroke_color);
+  transition: box-shadow .2s;
+}
+
+.language-dropdown-toggle::after {
+  content: none;
+}
+
+.language-dropdown-toggle_active {
+  box-shadow: var(--dropdown_language_picker_shadow_color) 0 .4375rem 1.8125rem 0, var(--dropdown_toggle_inset_shadow_color) 0 0 0 3.125rem inset;
+}
+
+.dropdown-language-picker {
+  display: block !important;
+  top: 0.1875rem !important;
+  transform: translate(0, 2.625rem);
+  padding: 0.875rem .75rem;
+  border: 0.0625rem solid var(--primary_stroke_color);
+  border-top: none;
+  border-radius: 0.625rem;
+  background-color: var(--language_dropdown_bg_color);
+  box-shadow: var(--dropdown_language_picker_shadow_color) 0 .4375rem 1.8125rem 0;
+}
+
+.dropdown-language-picker__scrollbar {
+  height: 17.9375rem;
+}
+
+.languages-list__item {
+  color: var(--dropdown_text_color);
+  position: relative;
+  cursor: pointer;
+  font-family: var(--font_family_bitter_regular);
+  font-size: 1rem;
+  padding: 0.625rem 2.5275rem;
+  border-radius: 0.625rem;
+  transition: background-color, color .2s;
+}
+
+.languages-list__item_active {
+  color: #fff;
+  background: var(--language_active_item_bg_color);
+}
+
+
+.languages-list__item:hover {
+  background-color: var(--language_picker_active_bg_color);
+}
+
+.languages-list__item:hover .btn-remove {
+  visibility: visible;
+  opacity: 1;
+}
+
+.btn-remove {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  right: 0.375rem;
+  top: 0.5625rem;
+  transition: opacity .3s linear;
+}
+
+// TODO: Doesn't work, need to be fixed
+/*.btn-remove:hover .btn-remove__icon {
+  fill: var(--remove_language_icon_active_color);
+}*/
+
+.btn-remove__icon {
+  fill: var(--remove_language_icon_color);
+  width: 1.36875rem;
+  height: 1.375rem;
+  /*transition: fill .2s;*/
+}
+

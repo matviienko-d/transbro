@@ -13,5 +13,5 @@
 @include font-face('Bitter-Regular', '../../fonts/Bitter-Regular', 400);
 @include font-face('Bitter-Bold', '../../fonts/Bitter-Bold', 700);
 
-@include font-face('Raleway-Regular', sans-serif, '../../fonts/Bitter-Regular', 400);
-@include font-face('Raleway-Bold', sans-serif, '../../fonts/Raleway-Bold', 700);
+@include font-face('Raleway-Regular', '../../fonts/Bitter-Regular', 400);
+@include font-face('Raleway-Bold', '../../fonts/Raleway-Bold', 700);

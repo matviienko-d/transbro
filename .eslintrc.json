@@ -118,6 +118,16 @@
     },
     {
       "files": [
+        "*.ts"
+      ],
+      "rules": {
+        "@typescript-eslint/explicit-member-accessibility": [
+          "error"
+        ]
+      }
+    },
+    {
+      "files": [
         "*.component.ts"
       ],
       "extends": [

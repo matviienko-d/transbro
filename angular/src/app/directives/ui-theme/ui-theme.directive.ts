@@ -5,7 +5,7 @@ import { takeUntil } from 'rxjs/operators';
 import { UiTheme, UiThemes } from '@models/ui-preferences';
 import { generateThemeStyles } from '@utils/ui-theme/ui-theme';
 import { DEFAULT_THEME } from '@directives/ui-theme/themes/default-theme';
-import { UiPreferencesRepository } from '@directives/ui-theme/store/ui-preferences.repository';
+import { UiPreferencesRepository } from '@directives/ui-theme/state/ui-preferences.repository';
 import { DARK_THEME } from '@directives/ui-theme/themes/dark-theme';
 
 @Directive({
