@@ -20,7 +20,7 @@ const uiPreferencesStore = createStore(
 export class UiPreferencesRepository {
   public theme$: Observable<UiThemes> = uiPreferencesStore.pipe(select((state) => state.theme));
 
-  constructor(private chromeStorage: ChromeStorageEngineService) {
+  public constructor(private chromeStorage: ChromeStorageEngineService) {
     this.initializePersistStore();
   }
 

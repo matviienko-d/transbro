@@ -1,9 +1,42 @@
-html,
-body {
-  font-size: var(--font_size_15);
-}
-
 body {
   overflow-x: hidden;
   font-family: var(--font_family_raleway_regular);
+}
+
+.h3 {
+  font-size: var(--font_size_12);
+  font-family: var(--font_family_raleway_bold);
+  font-weight: 700;
+  color: var(--h3_text_color);
+  text-transform: uppercase;
+  text-align: center;
+}
+
+ul {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.button-icon {
+  padding: 0;
+  border: 0;
+  min-width: auto;
+  position: relative;
+  vertical-align: middle;
+  background-color: transparent;
+  line-height: 1.4;
+  text-align: center;
+}
+
+.ps .ps__rail-x.ps--clicking,
+.ps .ps__rail-x:focus,
+.ps .ps__rail-x:hover,
+.ps .ps__rail-y.ps--clicking,
+.ps .ps__rail-y:focus,
+.ps .ps__rail-y:hover,
+perfect-scrollbar > .ps.ps--scrolling-x > .ps__rail-x,
+perfect-scrollbar > .ps.ps--scrolling-y > .ps__rail-y {
+  background-color: unset !important;
 }

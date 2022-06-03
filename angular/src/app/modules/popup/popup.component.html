@@ -1,5 +1,6 @@
 <ng-container uiTheme></ng-container>
 <div class="popup-wrapper">
+
   <header class="header">
     <div class="row justify-content-end">
       <div class="col-4 text-center">
@@ -12,6 +13,10 @@
           (stateChanged$)="onThemeChanged($event)"
         ></app-switcher>
       </div>
+
     </div>
+
+    <app-language-dropdown></app-language-dropdown>
+
   </header>
 </div>
