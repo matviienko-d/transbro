@@ -1,3 +1,9 @@
+:host::ng-deep.btn-remove__icon {
+  fill: var(--remove_language_icon_color);
+  width: 1.36875rem;
+  height: 1.375rem;
+}
+
 .language-dropdown-toggle {
   font-size: 1rem;
   font-family: var(--font_family_raleway_bold);
@@ -70,15 +76,4 @@
   transition: opacity .3s linear;
 }
 
-// TODO: Doesn't work, need to be fixed
-/*.btn-remove:hover .btn-remove__icon {
-  fill: var(--remove_language_icon_active_color);
-}*/
-
-.btn-remove__icon {
-  fill: var(--remove_language_icon_color);
-  width: 1.36875rem;
-  height: 1.375rem;
-  /*transition: fill .2s;*/
-}
 

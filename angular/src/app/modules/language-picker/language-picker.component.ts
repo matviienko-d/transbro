@@ -9,7 +9,7 @@ import { slideDown } from '@modules/language-picker/animations/language-dropdown
 
 // TODO: Investigate option of separate dropdown directive
 @Component({
-  selector: 'app-language-picker',
+  selector: 'app-language-picker[languagePreferencesRepo]',
   templateUrl: './language-picker.component.html',
   styleUrls: ['./language-picker.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,

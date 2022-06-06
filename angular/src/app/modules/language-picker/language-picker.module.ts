@@ -8,9 +8,10 @@ import {
   LANGUAGE_PREFERENCES_REPOS_FROM_STATE,
   LANGUAGE_PREFERENCES_REPOS_TO_STATE,
 } from '@providers/language-preferences.repository.provider';
+import { IconComponent } from "@components/icon/icon.component";
 
 @NgModule({
-  declarations: [LanguagePickerComponent],
+  declarations: [LanguagePickerComponent, IconComponent],
   providers: [
     { provide: LANGUAGE_PREFERENCES_REPOS_FROM_STATE, useClass: LanguagePreferencesRepository },
     { provide: LANGUAGE_PREFERENCES_REPOS_TO_STATE, useClass: LanguagePreferencesRepository },
