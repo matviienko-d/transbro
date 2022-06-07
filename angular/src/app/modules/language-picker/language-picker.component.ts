@@ -1,11 +1,12 @@
 import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
+import { pluck } from 'rxjs/operators';
 import { NgbDropdown } from '@ng-bootstrap/ng-bootstrap';
 import { AllLanguagesItem } from '@models/libre-translation';
 import { AllLanguagesRepository } from '@modules/language-dropdown/state/all-languages.repository';
 import { LanguagePreferencesRepository } from '@modules/language-dropdown/state/language-preferences.repository';
-import { pluck } from 'rxjs/operators';
 import { slideDown } from '@modules/language-picker/animations/language-dropdown.animation';
+import { IconNames } from "@models/icon-list";
 
 // TODO: Investigate option of separate dropdown directive
 @Component({
@@ -20,6 +21,7 @@ export class LanguagePickerComponent implements OnInit {
   public allLanguages$: Observable<AllLanguagesItem[]> = this.allLanguagesRepo.allLanguages$;
   public activeLanguage$: Observable<string>;
   public recentlyUsedLanguages$: Observable<AllLanguagesItem[]>;
+  public iconNames = IconNames;
 
   public constructor(private allLanguagesRepo: AllLanguagesRepository) {}
 

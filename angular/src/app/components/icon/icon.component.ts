@@ -8,6 +8,7 @@ import {
   ViewChild
 } from '@angular/core';
 import { iconList } from "@assets/icon-list/icon-list";
+import { IconNames } from "@models/icon-list";
 
 @Component({
   selector: 'app-icon[iconName]',
@@ -16,7 +17,7 @@ import { iconList } from "@assets/icon-list/icon-list";
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class IconComponent implements AfterViewInit {
-  @Input() public iconName: string;
+  @Input() public iconName: IconNames;
   @Input() public classList: string;
 
   @ViewChild('iconContainer', { read: ElementRef }) private readonly iconContainer: ElementRef
@@ -24,6 +25,6 @@ export class IconComponent implements AfterViewInit {
   constructor(private renderer: Renderer2) {}
 
   ngAfterViewInit(): void {
-    this.renderer.setProperty(this.iconContainer.nativeElement, 'innerHTML', iconList.get('x-icon'));
+    this.renderer.setProperty(this.iconContainer.nativeElement, 'innerHTML', iconList.get(IconNames.X_ICON));
   }
 }

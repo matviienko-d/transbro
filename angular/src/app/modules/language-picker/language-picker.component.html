@@ -29,7 +29,7 @@
                   *ngIf="!isLanguageItemActive(language.code)"
                   (click)="onRecentlyLanguageRemove(language.code)"
           >
-            <app-icon iconName="x-icon" classList="btn-remove__icon"></app-icon>
+            <app-icon [iconName]="iconNames.X_ICON" classList="btn-remove__icon"></app-icon>
           </button>
         </li>
       </ul>
