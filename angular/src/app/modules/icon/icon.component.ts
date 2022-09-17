@@ -25,6 +25,6 @@ export class IconComponent implements AfterViewInit {
   constructor(private renderer: Renderer2) {}
 
   ngAfterViewInit(): void {
-    this.renderer.setProperty(this.iconContainer.nativeElement, 'innerHTML', iconList.get(IconNames.X_ICON));
+    this.renderer.setProperty(this.iconContainer.nativeElement, 'innerHTML', iconList.get(this.iconName));
   }
 }

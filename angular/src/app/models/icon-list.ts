@@ -1,3 +1,5 @@
 export enum IconNames {
-  X_ICON
+  X_ICON,
+  ERROR_ASTRONAUT,
+  REPEAT
 }

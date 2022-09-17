@@ -1,0 +1,18 @@
+<main class="main">
+  <div class="row">
+    <div class="col-6 align-self-center">
+      <app-icon [iconName]="iconNames.ERROR_ASTRONAUT" classList="error-page-icon"></app-icon>
+    </div>
+    <div class="col-6 align-self-center error-info">
+      <h4 class="h4">ERROR</h4>
+      <h5 class="h5">UH OH! Transbro need to chill out.</h5>
+      <p class="error-info__description">Sorry, but don't blame <span class="link-warning error-info__inline-logo">transbro</span>,
+        blame your <a href="#" class="link-warning">internet provider</a> or <a href="#" class="link-warning">LibreTranslate</a>.
+        You
+        can click the button above to refresh extension, but it might not help.</p>
+      <button type="button refresh-button">
+        <app-icon [iconName]="iconNames.REPEAT" class="refresh-button__icon"></app-icon>
+      </button>
+    </div>
+  </div>
+</main>
